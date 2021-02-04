@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Fræðslumyndbandaleigan</title>
+        <link rel="stylesheet" href="/styles/styles.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="header">
+            <div class="header__container">
+                <h1> Myndbandaleigan  </h1>
+            </div>
+        </header>
+        <main>
+            <%categories.forEach(function(categories){%>
+            <div class="grid">
+                <div class="row">
+                    <h2 class="col col-12"><%- categories.title %> </h2>
+                </div>
+                <div class="row">
+                    <% videos.forEach(function(videos){%> 
+                        <% if( categories.videos.includes(videos.id)){ %>
+                            <div class="col col-4 col-sm-10 offset-col-sm-1 videocontainer">
+                                <div class="thumbnail-container">
+                                    <img src=" /img/<%- videos.poster %> " class="thumbnails">
+                                    <span class="display-time"><%- videoLength(videos.duration)%></span>
+                                </div>
+                                <div class="info">
+                                    <h4> <%- videos.title%></h4>
+                                    <h5> Hlaðið upp <%- videoAge(videos.created) %></h5>
+                                </div>
+                            </div>    
+                        <%}%> 
+                    <%})%>
+                </div>
+            </div>  
+            <hr class="split">
+            <%})%>
+        </main>
+    </body>
+</html>

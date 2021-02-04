@@ -1,0 +1,35 @@
+.thumbnails {
+  height: 100%;
+  width: 100%;
+}
+
+.videocontainer {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.info {
+  align-content: space-between;
+  display: flex;
+  flex-direction: column;
+  height: 3rem;
+  line-height: 2.2rem;
+}
+
+.thumbnail-container {
+  position: relative;
+}
+
+.display-time {
+  background-color: $video-length-color;
+  bottom: 0.3rem;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  padding: 0 0.4rem;
+  position: absolute;
+  right: 0.3rem;
+  width: fit-content;
+}

@@ -1,0 +1,45 @@
+video {
+  height: auto;
+  position: absolute;
+  width: 100%;
+
+  @media (max-width: 560px) {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.button {
+  background-color: #fff;
+  border: 0;
+}
+
+.controlrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: auto;
+}
+
+.overlay {
+  background-color: $overlay-color;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.videocol {
+  height: calc(100vw * 9 / 16);
+  max-height: 736px;
+  position: relative;
+}
+
+.overlayicon {
+  filter: invert(1);
+  height: 100px;
+  margin: auto;
+  position: absolute;
+  right: calc(50% - 50px);
+  top: calc(50% - 50px);
+  width: 100px;
+}

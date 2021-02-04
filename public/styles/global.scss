@@ -1,0 +1,37 @@
+@import './config';
+// Global styles
+
+main {
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-size: $default-font-size;
+  justify-content: center;
+}
+
+.split {
+  margin: 1rem auto;
+  max-width: 1032px;
+  width: 80%;
+}
+
+.loading {
+  font-size: $error-font-size;
+}
+
+a {
+  color: #000;
+}
